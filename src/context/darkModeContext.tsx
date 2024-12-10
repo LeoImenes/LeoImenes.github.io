@@ -80,6 +80,12 @@ export const DarkModeProvider = ({ children }: PropsWithChildren) => {
                 color: darkTheme ? "#E0E1DD" : "#1B263B",
               },
             },
+            {
+              props:{variant:'h5'},
+              style: {
+                fontSize: '1.6em'
+              },
+            },
           ],
         },
       },

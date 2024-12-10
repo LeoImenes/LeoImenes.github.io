@@ -1,0 +1,42 @@
+@keyframes slide-in {
+    from {
+        translate: 150vw 0;
+        scale: 200% 1;
+    }
+
+    to {
+        translate: 0 0;
+        scale: 100% 1;
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.aboutMeText {
+    animation-duration: .5s;
+    animation-name: slide-in;
+    animation-iteration-count: forwards;
+}
+
+
+#carroussel {
+    display: flex;
+    position: absolute;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    animation: slide 20s linear infinite;
+
+    &:hover {
+        animation-play-state: paused;
+    }
+}
