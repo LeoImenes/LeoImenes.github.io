@@ -1,7 +1,7 @@
 {
   "homepage":"https://leoimenes.github.io/leo-portfolio/",
   "name": "portfolio",
-  "private": false,
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
