@@ -18,12 +18,13 @@ export const DarkModeContext = createContext<DarkModeContextType | undefined>(
 );
 
 export const DarkModeProvider = ({ children }: PropsWithChildren) => {
-  const [darkTheme, setDarkTheme] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(!false);
   const customTheme = useMemo<Theme>(() => {
     return createTheme({
       palette: {
         primary: {
           main: darkTheme ? "#0D1B2A" : "#FFFFFF",
+          light: !darkTheme ? "#0D1B2A" : "#FFFFFF",
         },
         secondary: {
           main: darkTheme ? "#D9D9D9" : "#1B263B",
@@ -81,9 +82,9 @@ export const DarkModeProvider = ({ children }: PropsWithChildren) => {
               },
             },
             {
-              props:{variant:'h5'},
+              props: { variant: "h5" },
               style: {
-                fontSize: '1.6em'
+                fontSize: "1.6em",
               },
             },
           ],

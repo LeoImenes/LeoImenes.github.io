@@ -1,5 +1,5 @@
-import MenuIcon from "@mui/icons-material/Menu";
-import { IconButton, Stack, Typography } from "@mui/material";
+import { Box } from "@mui/joy";
+import { Stack, Typography } from "@mui/material";
 import { useDarkMode } from "../../hooks/useDarkMode";
 import { MaterialUISwitch } from "../Switch/DarkModeSwitch";
 import "./Header.css";
@@ -30,16 +30,9 @@ export const Header = () => {
         Portfolio
       </Typography>
 
-      <IconButton aria-label="delete" size="small">
-        <MenuIcon
-          sx={{
-            width: { xs: "30px", sm: "40px", lg: "50px" },
-            height: { xs: "35px", sm: "40px", lg: "50px" },
-            color: "#fff",
-          }}
-          fontSize="inherit"
-        />
-      </IconButton>
+      <Box >
+      
+      </Box>
     </Stack>
   );
 };
